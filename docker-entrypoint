@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+set -e;
+
+bindir="$(composer config --global data-dir)/$(composer config --global bin-dir)"
+export PATH="${bindir}:${PATH}"
+
+exec /docker-entrypoint.sh "$@"
