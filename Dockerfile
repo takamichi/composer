@@ -1,4 +1,5 @@
 FROM composer:latest
 
-RUN export PATH="`composer config --global data-dir`/`composer config --global bin-dir`:$PATH" \
-    && composer global require hirak/prestissimo
+RUN set -xe; \
+    : "Install parallel install plugin `prestissimo` ..."; \
+    composer global require hirak/prestissimo --no-interaction;
