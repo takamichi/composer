@@ -14,6 +14,7 @@ RUN set -xe; \
     pecl install \
         ast \
         "xdebug-2.6.0"; \
+    : "Enable php-ast ..."; \
     docker-php-ext-enable \
         ast; \
     \
