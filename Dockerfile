@@ -13,7 +13,7 @@ RUN set -xe; \
     pecl config-set php_ini "${PHP_INI_DIR}/php.ini"; \
     pecl install \
         ast \
-        "xdebug-2.6.1"; \
+        xdebug; \
     : "Enable php-ast ..."; \
     docker-php-ext-enable \
         ast; \
